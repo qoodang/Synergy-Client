@@ -1,0 +1,16 @@
+Client reconnect
+Proper handling of shift, alt, caps lock... etc.  
+
+
+Options to Implement
+-------------------------
+Logging level
+Port number
+Retry interval ?
+
+
+Key Translation
+
+
+
+

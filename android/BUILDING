@@ -1,0 +1,4 @@
+build_jni.sh 
+  -- For now you must change the location of your android ndk 
+
+./android is the Java source

@@ -1,0 +1,8 @@
+The goal of this project is not to re-create a Synergy client but I think 
+that's what it'll initially turn into.  However, it seems to me that the 
+Java Robot class will be too slow for mouse movements.  I find it a bit 
+sluggish in Linux when dragging around windows.  It could just be the 
+crappy laptop I'm running it on.
+
+My plan was to create a fairly decent client that worked on Linux or any
+other major desktop OS and then port it to Android. 
