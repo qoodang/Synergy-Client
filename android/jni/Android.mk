@@ -24,3 +24,7 @@ LOCAL_MODULE    := synergy-jni
 LOCAL_SRC_FILES := synergy-jni.c suinput.c
 
 include $(BUILD_SHARED_LIBRARY)
+
+LOCAL_LDLIBS := -L$(SYSROOT)/usr/lib -llog
+
+LOCAL_CFLAGS := -DCONFIG_EMBEDDED\ -DUSE_IND_THREAD\

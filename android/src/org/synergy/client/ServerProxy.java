@@ -193,7 +193,7 @@ public class ServerProxy {
     		// Cut right to the chase ??
     		//injection.moveMouse (x, y);
     		
-            //Log.debug ("x: " + x + ", y:" + y);
+            Log.debug ("x: " + x + ", y:" + y);
             client.mouseMove ((int)x, (int) y);
 
 			//mouseMove (new MouseMoveMessage (din));

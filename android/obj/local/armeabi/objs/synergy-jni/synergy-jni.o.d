@@ -29,7 +29,8 @@
  /home/minseok/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/asm/ioctls.h \
  /home/minseok/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/asm/termbits.h \
  /home/minseok/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/sys/ioctl_compat.h \
- /home/minseok/workspace/synergyandroid/android/jni/input.h
+ /home/minseok/workspace/synergyandroid/android/jni/input.h \
+ /home/minseok/workspace/synergyandroid/android/jni/android_log.h
 
 /home/minseok/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/string.h:
 
@@ -90,3 +91,5 @@
 /home/minseok/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/sys/ioctl_compat.h:
 
 /home/minseok/workspace/synergyandroid/android/jni/input.h:
+
+/home/minseok/workspace/synergyandroid/android/jni/android_log.h:

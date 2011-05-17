@@ -20,6 +20,7 @@
 
 #include "uinput.h"
 #include "input.h"
+#include "android_log.h"
 
 #define DEBUG_TAG "Synergy"
 
@@ -47,7 +48,6 @@ void Java_org_synergy_injection_Injection_start (JNIEnv *env, jobject thiz) {
     1 /* Version id. */
   };
   uinput_fd = suinput_open("qwerty", &id);
-
   build_key_translation_table ();
 }
                                         

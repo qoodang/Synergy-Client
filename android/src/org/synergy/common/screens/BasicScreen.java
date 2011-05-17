@@ -113,10 +113,10 @@ public class BasicScreen implements PlatformScreenInterface {
 	public final void fakeMouseMove (int x, int y) {
 		count++;
         Log.debug2 ("fakeMouseMove: " + x + ", " + y);
-        if (count % 3 != 0) {
-        	// Because my G1 phone is so slow... I'm skipping every other mouse movement
-        	return;
-        }
+//        if (count % 3 != 0) {
+//        	// Because my G1 phone is so slow... I'm skipping every other mouse movement
+//        	return;
+//        }
   
         
         if (mouseX < 0 || mouseY < 0) {

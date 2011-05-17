@@ -124,7 +124,10 @@ public class Synergy extends Activity {
        
         final Button testButton = (Button) findViewById (R.id.test);
         final Button connectButton = (Button) findViewById (R.id.connect);
-        
+        //모토믹스 : 키보드 없음, 트랙볼지원
+        //에뮬레이터 : 쿼티키보드, 트랙볼지원
+        int a = getResources().getConfiguration().navigation;
+        int b = getResources().getConfiguration().keyboard;
         testButton.setOnClickListener (new View.OnClickListener() {
 			public void onClick (View arg) {
 				testConnection ();
