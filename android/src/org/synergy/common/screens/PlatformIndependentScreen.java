@@ -20,15 +20,9 @@
 package org.synergy.common.screens;
 
 
-import org.synergy.base.Event;
-import org.synergy.base.EventQueue;
-import org.synergy.base.EventType;
-import org.synergy.base.Log;
-import org.synergy.injection.Injection;
-
-import android.graphics.Point;
-import android.graphics.Rect;
-import android.os.IBinder;
+import org.synergy.base.*;
+import org.synergy.injection.*;
+import android.graphics.*;
 
 public class PlatformIndependentScreen implements ScreenInterface {
 
@@ -234,9 +228,9 @@ public class PlatformIndependentScreen implements ScreenInterface {
         // TODO move to screen implementation
 
     	
-        int buttons = 0;
+     /*   int buttons = 0;
 
-        /*
+     
         switch (buttonID) {
         case 1:
             buttons = InputEvent.BUTTON1_MASK;
@@ -248,8 +242,9 @@ public class PlatformIndependentScreen implements ScreenInterface {
         default:
             buttons = InputEvent.BUTTON3_MASK;
             break;
-        }
-        */
+        }*/
+        
+       
 
         screen.fakeMouseButton (buttonID, true);
         //robot.mousePress (buttons);

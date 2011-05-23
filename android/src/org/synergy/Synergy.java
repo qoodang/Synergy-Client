@@ -19,27 +19,19 @@
  */
 package org.synergy;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
+import java.net.*;
+import java.util.*;
 
-import org.synergy.base.Event;
-import org.synergy.base.EventQueue;
-import org.synergy.base.EventType;
-import org.synergy.base.Log;
-import org.synergy.base.exceptions.InvalidMessageException;
-import org.synergy.client.Client;
+import org.synergy.base.*;
+import org.synergy.client.*;
 import org.synergy.common.screens.*;
-import org.synergy.injection.Injection;
+import org.synergy.injection.*;
 import org.synergy.net.*;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Display;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TabHost;
+import android.app.*;
+import android.os.*;
+import android.view.*;
+import android.widget.*;
 
 public class Synergy extends Activity {
 	
@@ -128,6 +120,24 @@ public class Synergy extends Activity {
         //에뮬레이터 : 쿼티키보드, 트랙볼지원
         int a = getResources().getConfiguration().navigation;
         int b = getResources().getConfiguration().keyboard;
+        //아이피 확인하기
+        try {
+        	  Enumeration<NetworkInterface> en =
+        	    NetworkInterface.getNetworkInterfaces(); 
+        	  while(en.hasMoreElements()) {
+        	         NetworkInterface interf = en.nextElement();
+        	         Enumeration<InetAddress> ips = interf.getInetAddresses();
+        	              while (ips.hasMoreElements()) {
+        	                InetAddress inetAddress = ips.nextElement();
+        	                if (!inetAddress.isLoopbackAddress()) {
+        	                       String addr =  inetAddress.getHostAddress().toString();
+        	                       System.out.println(addr);
+        	             }
+        	      }
+        	  }
+        	  } catch (SocketException ex) {
+        	      
+        	  }
         testButton.setOnClickListener (new View.OnClickListener() {
 			public void onClick (View arg) {
 				testConnection ();
