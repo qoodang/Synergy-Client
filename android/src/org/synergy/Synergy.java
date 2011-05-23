@@ -19,9 +19,6 @@
  */
 package org.synergy;
 
-import java.net.*;
-import java.util.*;
-
 import org.synergy.base.*;
 import org.synergy.client.*;
 import org.synergy.common.screens.*;
@@ -29,7 +26,9 @@ import org.synergy.injection.*;
 import org.synergy.net.*;
 
 import android.app.*;
+import android.content.*;
 import android.os.*;
+import android.text.*;
 import android.view.*;
 import android.widget.*;
 
@@ -143,8 +142,14 @@ public class Synergy extends Activity {
         	  
         	  */
         testButton.setOnClickListener (new View.OnClickListener() {
+        	//출처 : http://blog.saltfactory.net/2010/11/14/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%EC%97%90%EC%84%9C-%ED%81%B4%EB%A6%BD%EB%B3%B4%EB%93%9C-%EC%82%AC%EC%9A%A9/
 			public void onClick (View arg) {
-				testConnection ();
+				EditText outputText = (EditText) findViewById (R.id.output);
+				 ClipboardManager clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+	                clipboardManager.setText("hi");
+	                outputText.setText(clipboardManager.getText());
+				//testConnection ();
+				
 			}
 		});
         
@@ -161,7 +166,8 @@ public class Synergy extends Activity {
         try {
 			Injection.startInjection ();
 		} catch (Exception e) {
-			// TODO handle exception
+			e.printStackTrace();
+			
 		}
     }
     
