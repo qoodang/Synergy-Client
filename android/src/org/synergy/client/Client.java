@@ -86,13 +86,13 @@ public class Client implements EventTarget {
 	    // TODO
 	}
 	
-	public void connect () {
+	public void connect () throws Exception {
         if (stream != null) {
             Log.info ("stream != null");
             return;
         }
 
-		try {
+        //Exception 처리
 			serverAddress.resolve ();
 			
 			if (serverAddress.getAddress () != null) {
@@ -119,10 +119,7 @@ public class Client implements EventTarget {
 
             socket.connect (serverAddress);
             
-		} catch (Exception e) {
-            // TODO
-			e.printStackTrace ();
-		}
+
 	}
 	
 	public void disconnect (String msg) {
