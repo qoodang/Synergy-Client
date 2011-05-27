@@ -19,13 +19,10 @@
  */
 package org.synergy.common.screens;
 
-import org.synergy.*;
 import org.synergy.base.Log;
 import org.synergy.injection.Injection;
 
-import android.app.*;
 import android.graphics.Rect;
-import android.view.*;
 
 public class BasicScreen implements PlatformScreenInterface{
 	
@@ -92,7 +89,7 @@ public class BasicScreen implements PlatformScreenInterface{
 	public void fakeKeyDown (int id, int mask) {
 		//keyThread.keyDown(id, mask);
 		//keyThread.keyUp(id, mask);
-
+		
 		Injection.keydown(id, mask);
 		
 		// This stops keys from repeating...but it doesn't seem like the correct thing to do

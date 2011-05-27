@@ -43,6 +43,7 @@ public class KeyUpMessage extends Message {
 		return mask;
 	}
 	
+	@Override
 	public String toString () {
 		return MESSAGE_TYPE + ":" + id + ":" + mask + ":" + button;
 	}

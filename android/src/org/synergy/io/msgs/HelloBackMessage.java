@@ -19,7 +19,6 @@
  */
 package org.synergy.io.msgs;
 
-import java.io.DataOutputStream;
 import java.io.IOException;
 
 public class HelloBackMessage extends Message {

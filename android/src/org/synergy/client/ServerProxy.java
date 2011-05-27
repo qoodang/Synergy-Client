@@ -194,7 +194,7 @@ public class ServerProxy {
     		//injection.moveMouse (x, y);
     		
             Log.debug ("x: " + x + ", y:" + y);
-            client.mouseMove ((int)x, (int) y);
+            client.mouseMove (x, y);
 
 			//mouseMove (new MouseMoveMessage (din));
             // I think this'll be too slow

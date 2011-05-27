@@ -19,14 +19,11 @@
  */
 package org.synergy.base;
 
-import java.util.List;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Set;
-import java.util.Vector;
-
 import org.synergy.base.exceptions.InvalidMessageException;
 
 public class EventQueue implements EventQueueInterface {

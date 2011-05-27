@@ -90,6 +90,7 @@ public class Event {
 		return name;
 	}
 	
+	@Override
 	public String toString () {
 		return "Event:" + type.toString () + ":" + target;
 	}

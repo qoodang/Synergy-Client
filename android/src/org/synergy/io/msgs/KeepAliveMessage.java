@@ -32,6 +32,7 @@ public class KeepAliveMessage extends EmptyMessage {
 		super (MESSAGE_TYPE);
 	}
 	
+	@Override
 	public String toString () {
 		return "KeepAliveMessage";
 	}

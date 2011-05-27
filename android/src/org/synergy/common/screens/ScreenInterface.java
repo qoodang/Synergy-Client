@@ -21,8 +21,6 @@ package org.synergy.common.screens;
 
 import android.graphics.*;
 
-import org.synergy.base.Event;
-
 public interface ScreenInterface {
 
 	public Object getEventTarget ();

@@ -171,6 +171,8 @@ static void build_key_translation_table () {
 	//ctrl, alt key process
 	keyTranslation[61411] = KEY_LEFTCTRL;
 	keyTranslation[61417] = KEY_LEFTALT;
+	//esc key process(back key)
+	keyTranslation[61211] = KEY_BACK;
 
     // Arrows
     keyTranslation [61265] = KEY_LEFT;

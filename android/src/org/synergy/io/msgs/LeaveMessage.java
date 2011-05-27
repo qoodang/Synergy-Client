@@ -29,6 +29,7 @@ public class LeaveMessage extends EmptyMessage {
 		super ();
 	}
 	
+	@Override
 	public String toString () {
 		return "LeaveMessage";
 	}

@@ -32,6 +32,7 @@ public class EmptyMessage extends Message {
 		super (type);
 	}
 	
+	@Override
 	protected final void writeData () {
 		// Do nothing. 
 	}

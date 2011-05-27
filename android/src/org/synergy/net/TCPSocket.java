@@ -71,7 +71,8 @@ public class TCPSocket implements DataSocketInterface {
     }
 
 
-    public void finalize () throws Throwable {
+    @Override
+	public void finalize () throws Throwable {
     }
 
     public void bind (final NetworkAddress address) {

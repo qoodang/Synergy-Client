@@ -19,12 +19,6 @@
  */
 package org.synergy.io;
 
-import java.io.DataInputStream;
-import java.io.IOException;
-import java.nio.ByteBuffer;
-
-import org.synergy.base.Log;
-
 public class ProtocolUtil {
 
 	/**

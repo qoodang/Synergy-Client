@@ -33,10 +33,11 @@ public class MouseUpMessage extends Message {
     }
 
     public int getButtonID () {
-        return (int) buttonID;
+        return buttonID;
     }
 
-    public String toString () {
+    @Override
+	public String toString () {
         return "MouseUpMessage:" + buttonID;
     }
 

@@ -41,6 +41,7 @@ public class ClipboardDataMessage extends Message {
 		data = mdin.readString ();
 	}
 	
+	@Override
 	public String toString () {
 		return "ClipboardDataMessage:" + id + ":" + sequenceNumber + ":" + data;
 	}

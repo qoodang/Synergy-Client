@@ -55,6 +55,7 @@ public class EnterMessage extends Message {
 		return mask;
 	}
 
+	@Override
 	public String toString () {
 		return "EnterMessage:(" + x + "," + y + "):" + sequenceNumber + ":" + mask;  
 	}

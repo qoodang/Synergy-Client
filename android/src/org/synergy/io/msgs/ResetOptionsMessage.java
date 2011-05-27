@@ -36,6 +36,7 @@ public class ResetOptionsMessage extends EmptyMessage {
 		super (MESSAGE_TYPE);
 	}
 
+	@Override
 	public String toString () {
 		return "ResetOptionsMessage: TODO";
 	}

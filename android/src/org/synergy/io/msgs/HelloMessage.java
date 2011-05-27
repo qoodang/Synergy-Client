@@ -20,7 +20,6 @@
 package org.synergy.io.msgs;
 
 import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.IOException;
 
 import org.synergy.io.MessageDataInputStream;
@@ -76,6 +75,7 @@ public class HelloMessage extends Message {
 		return minorVersion;
 	}
 	
+	@Override
 	public String toString () {
 		return "HelloMessage:" + majorVersion + ":"  + minorVersion;
 	}

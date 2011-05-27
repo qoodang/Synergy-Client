@@ -28,6 +28,7 @@ public class ScreenSaverMessage {
 	public ScreenSaverMessage (DataInputStream din) throws IOException {
 	}
 	
+	@Override
 	public String toString () {
 		return "ScreenSaverMessage: TODO";
 	}

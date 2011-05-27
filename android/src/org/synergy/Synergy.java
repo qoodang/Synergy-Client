@@ -43,6 +43,7 @@ public class Synergy extends Activity {
 	private class TestThread extends Thread {
 		public TestThread () {}
 		
+		@Override
 		public void run () {
 			try {
 				// Time to beat: 5084634146
@@ -88,6 +89,7 @@ public class Synergy extends Activity {
 			
 		}
 		
+		@Override
 		public void run () {
 			try {
 		        Event event = new Event ();
@@ -210,7 +212,7 @@ public class Synergy extends Activity {
             
 			Client client = new Client (hostname, serverAddress, socketFactory, null, screen);
 			client.connect ();
-
+			outputText.setText("Connection Sucess!");
 			new MainLoopThread ().start ();
         } catch (Exception e) {
         	e.printStackTrace();

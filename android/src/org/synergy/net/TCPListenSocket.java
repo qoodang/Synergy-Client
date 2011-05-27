@@ -21,6 +21,7 @@ package org.synergy.net;
 
 public class TCPListenSocket extends ListenSocketInterface {
 
+	@Override
 	public DataSocketInterface accept () {
 		return null;
 	}

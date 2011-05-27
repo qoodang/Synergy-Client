@@ -67,6 +67,7 @@ public class EventQueueTimer {
 	 *  
 	 */
 	private class TimerEventTask extends TimerTask {
+		@Override
 		public void run () {
 			job.run (new Event (EventType.TIMER, target));
 			/*Log.debug ("Timer fired");

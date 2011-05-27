@@ -82,6 +82,7 @@ public class Client implements EventTarget {
         // TODO
 	}
 	
+	@Override
 	public void finalize () throws Throwable {
 	    // TODO
 	}
@@ -331,7 +332,7 @@ public class Client implements EventTarget {
     	mouseX = enterMessage.getX ();
     	mouseY = enterMessage.getY ();
         screen.mouseMove (mouseX, mouseY);
-        screen.enter ((int)enterMessage.getMask ());
+        screen.enter (enterMessage.getMask ());
     }
     
     public void leave (LeaveMessage leaveMessage) {

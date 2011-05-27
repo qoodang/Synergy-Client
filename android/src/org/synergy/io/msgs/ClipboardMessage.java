@@ -28,6 +28,7 @@ public class ClipboardMessage extends Message {
 	public ClipboardMessage (DataInputStream din) throws IOException {
 	}
 	
+	@Override
 	public String toString () {
 		return "ClipboardMessage: TODO";
 	}

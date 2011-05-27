@@ -60,7 +60,8 @@ public class PlatformIndependentScreen implements ScreenInterface {
         
     }
 
-    public void finalize () throws Throwable {
+    @Override
+	public void finalize () throws Throwable {
         if (enabled) {
             disable ();
         }

@@ -22,8 +22,6 @@ package org.synergy.io.msgs;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 
 /**
  * Describes a message header
@@ -99,6 +97,7 @@ public class MessageHeader {
 		
 	}
 
+	@Override
 	public String toString () {
 		return "MessageHeader:" + size + ":" + dataSize + ":" + type;
 	}

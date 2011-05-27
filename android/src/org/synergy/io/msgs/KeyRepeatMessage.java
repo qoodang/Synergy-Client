@@ -38,23 +38,24 @@ public class KeyRepeatMessage extends Message {
 	}
 
 	public int getID () {
-		return (int) id;
+		return id;
 	}
 	
 	public int getMask () {
-		return (int) mask;
+		return mask;
 	}
 	
 	public int getCount () { 
-		return (int) count;
+		return count;
 	}
 	
 	public int getButton () {
-		return (int) button;
+		return button;
 	}
 
 	
 	
+	@Override
 	public String toString () {
 		return MESSAGE_TYPE + ":" + id + ":" + mask + ":" + button;
 	}

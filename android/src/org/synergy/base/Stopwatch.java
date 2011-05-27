@@ -51,7 +51,7 @@ public class Stopwatch {
 	}
 
     private double getClock () {
-        return (double) System.currentTimeMillis () / 1000.0;
+        return System.currentTimeMillis () / 1000.0;
     }
 
 

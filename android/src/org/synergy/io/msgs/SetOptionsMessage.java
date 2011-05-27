@@ -43,7 +43,8 @@ public class SetOptionsMessage extends Message {
         }
     }
 
-    public String toString () {
+    @Override
+	public String toString () {
         return "SetOptionsMessage:";
     }
 }

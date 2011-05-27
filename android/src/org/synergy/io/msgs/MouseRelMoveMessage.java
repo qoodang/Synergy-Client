@@ -34,14 +34,15 @@ public class MouseRelMoveMessage {
 	}
 	
 	public int getX () {
-		return (int) x;
+		return x;
 	}
 	
 	public int getY () {
-		return (int) y;
+		return y;
 	}
 	
 	
+	@Override
 	public String toString () {
 		return "MouseRelMoveMessage:(" + x + "," + y + ")";
 	}

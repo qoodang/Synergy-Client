@@ -43,7 +43,8 @@ public class NetworkAddress {
         this.port = port;
     }
 
-    protected void finalize () throws Throwable {
+    @Override
+	protected void finalize () throws Throwable {
         super.finalize ();
 
         // TODO close address

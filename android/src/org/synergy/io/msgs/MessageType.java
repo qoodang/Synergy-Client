@@ -66,7 +66,8 @@ public enum MessageType {
         return value;
     }
 
-    public String toString () {
+    @Override
+	public String toString () {
         return commonName;
     }
 
