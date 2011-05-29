@@ -23,6 +23,7 @@ import org.synergy.base.Log;
 import org.synergy.injection.Injection;
 
 import android.graphics.Rect;
+import android.view.*;
 
 public class BasicScreen implements PlatformScreenInterface{
 	

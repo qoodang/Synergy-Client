@@ -19,34 +19,15 @@
  */
 package org.synergy.client;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.*;
 
-import org.synergy.base.Event;
-import org.synergy.base.EventJobInterface;
-import org.synergy.base.EventQueue;
-import org.synergy.base.EventQueueTimer;
-import org.synergy.base.EventType;
-import org.synergy.base.Log;
-import org.synergy.io.Stream;
-import org.synergy.io.msgs.ClipboardDataMessage;
-import org.synergy.io.msgs.ClipboardMessage;
-import org.synergy.io.msgs.EnterMessage;
-import org.synergy.io.msgs.InfoMessage;
-import org.synergy.io.msgs.KeepAliveMessage;
-import org.synergy.io.msgs.KeyDownMessage;
-import org.synergy.io.msgs.KeyRepeatMessage;
-import org.synergy.io.msgs.KeyUpMessage;
-import org.synergy.io.msgs.LeaveMessage;
-import org.synergy.io.msgs.MessageHeader;
-import org.synergy.io.msgs.MouseDownMessage;
-import org.synergy.io.msgs.MouseRelMoveMessage;
-import org.synergy.io.msgs.MouseUpMessage;
-import org.synergy.io.msgs.MouseWheelMessage;
-import org.synergy.io.msgs.ResetOptionsMessage;
-import org.synergy.io.msgs.ScreenSaverMessage;
-import org.synergy.io.msgs.SetOptionsMessage;
+import org.synergy.base.*;
+import org.synergy.io.*;
+import org.synergy.io.msgs.*;
+
+import android.content.*;
+import android.text.*;
+import android.widget.*;
 
 public class ServerProxy {
     private static final double KEEP_ALIVE_UNTIL_DEATH = 3.0;
@@ -525,10 +506,12 @@ public class ServerProxy {
 	}
 
 	private void grabClipboard (ClipboardMessage clipboardMessage) {
+		
 	}
 
 	private void setClipboard (ClipboardDataMessage clipboardDataMessage) {
 		Log.debug1 ("Setting clipboard: " + clipboardDataMessage);
+		client.setClipboard(clipboardDataMessage.getData());		
 	}
 
 }

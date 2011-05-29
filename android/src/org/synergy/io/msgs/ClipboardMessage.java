@@ -26,6 +26,7 @@ public class ClipboardMessage extends Message {
 	public static final MessageType MESSAGE_TYPE = MessageType.DCLIPBOARD;
 	
 	public ClipboardMessage (DataInputStream din) throws IOException {
+		
 	}
 	
 	@Override

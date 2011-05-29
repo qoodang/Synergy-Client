@@ -212,6 +212,8 @@ public class Synergy extends Activity {
             
 			Client client = new Client (hostname, serverAddress, socketFactory, null, screen);
 			client.connect ();
+			//클립보드 매니저 설정
+			client.setClipboard((ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE));
 			outputText.setText("Connection Sucess!");
 			new MainLoopThread ().start ();
         } catch (Exception e) {

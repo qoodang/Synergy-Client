@@ -35,12 +35,22 @@ public class ClipboardDataMessage extends Message {
 		super (header);
 		
 		MessageDataInputStream mdin = new MessageDataInputStream(din);
-		
 		id = mdin.readByte();
 		sequenceNumber = mdin.readInt();
 		data = mdin.readString ();
 	}
 	
+	public byte getId() {
+		return id;
+	}
+
+	public int getSequenceNumber() {
+		return sequenceNumber;
+	}
+
+	public String getData(){
+		return data.substring(12);
+	}
 	@Override
 	public String toString () {
 		return "ClipboardDataMessage:" + id + ":" + sequenceNumber + ":" + data;

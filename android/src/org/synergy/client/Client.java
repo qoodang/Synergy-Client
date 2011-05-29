@@ -21,8 +21,11 @@ package org.synergy.client;
 
 import android.graphics.*;
 
+import android.text.*;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+
 
 import org.synergy.base.Event;
 import org.synergy.base.EventJobInterface;
@@ -49,6 +52,7 @@ public class Client implements EventTarget {
 	private SocketFactoryInterface socketFactory;
 	private StreamFilterFactoryInterface streamFilterFactory;
 	private ScreenInterface screen;
+	private ClipboardManager clipboard;
 	
 	private boolean ready;
 	private boolean active;
@@ -87,6 +91,15 @@ public class Client implements EventTarget {
 	    // TODO
 	}
 	
+	//클립보드 변수 세팅
+	public ClipboardManager getClipboard() {
+		return clipboard;
+	}
+
+	public void setClipboard(ClipboardManager clipboard) {
+		this.clipboard = clipboard;
+	}
+
 	public void connect () throws Exception {
         if (stream != null) {
             Log.info ("stream != null");
@@ -382,6 +395,10 @@ public class Client implements EventTarget {
       */
     public void keyUp (int keyEventID, int mask) {
     	screen.keyUp (keyEventID, mask);
+    }
+    
+    public void setClipboard(String data){
+    	clipboard.setText(data);
     }
 
 
