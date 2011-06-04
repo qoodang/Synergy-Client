@@ -104,6 +104,7 @@ public class Synergy extends Activity {
 				
 			} catch (Exception e) {
 				e.printStackTrace ();
+				Toast.makeText(Synergy.this, "[Synergy error]" + e.getMessage(),Toast.LENGTH_SHORT).show();
 			}
 		}
 	}
@@ -168,6 +169,7 @@ public class Synergy extends Activity {
         try {
 			Injection.startInjection ();
 		} catch (Exception e) {
+			Toast.makeText(this, "[Synergy error]"+e.getMessage(), Toast.LENGTH_SHORT).show();
 			e.printStackTrace();
 			
 		}
@@ -182,6 +184,7 @@ public class Synergy extends Activity {
     	EditText ipText = (EditText) findViewById (R.id.ipAddress);
     	EditText outputText = (EditText) findViewById (R.id.output);
     	
+
         try {
         	SocketFactoryInterface socketFactory = new TCPSocketFactory();
        	   	NetworkAddress serverAddress = new NetworkAddress (ipText.getText ().toString (), 24800);

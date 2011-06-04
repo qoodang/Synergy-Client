@@ -27,6 +27,7 @@ import org.synergy.io.msgs.*;
 
 import android.content.*;
 import android.text.*;
+import android.view.*;
 import android.widget.*;
 
 public class ServerProxy {
@@ -307,6 +308,7 @@ public class ServerProxy {
 			}
 		} catch (IOException e) {
 			e.printStackTrace ();
+			Toast.makeText(null, "[Synergy error] : "+e.getMessage(), Toast.LENGTH_SHORT);
 			// TODO
 		}
 
@@ -455,7 +457,6 @@ public class ServerProxy {
 
 	private void keyRepeat (KeyRepeatMessage keyRepeatMessage) {
         Log.debug1 (keyRepeatMessage.toString ());
-        
         
         try {
             //int keyEventID = KeyTranslator.translateKey (keyRepeatMessage.getID ());

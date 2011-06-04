@@ -26,6 +26,8 @@ import java.util.PriorityQueue;
 import java.util.Set;
 import org.synergy.base.exceptions.InvalidMessageException;
 
+import android.widget.*;
+
 public class EventQueue implements EventQueueInterface {
 
     // registered events
@@ -153,7 +155,6 @@ public class EventQueue implements EventQueueInterface {
      */
     public void addEvent (final Event event) {
     	Log.debug5 ("addEvent");
-    	
         // discard bogus Integers
 		switch (event.getType ()) {
 		case UNKNOWN:

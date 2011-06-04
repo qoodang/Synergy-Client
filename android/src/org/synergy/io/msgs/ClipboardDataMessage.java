@@ -49,7 +49,10 @@ public class ClipboardDataMessage extends Message {
 	}
 
 	public String getData(){
-		return data.substring(12);
+		if(data.length()>12)
+			return data.substring(12);
+		else
+			return data;
 	}
 	@Override
 	public String toString () {
