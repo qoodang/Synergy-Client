@@ -34,7 +34,6 @@ public class MessageDataInputStream extends DataInputStream {
 	 */
 	public String readString () throws IOException {
 		int stringLength = readInt ();
-
 		
 		// Read in the bytes and convert to a string
 		byte [] stringBytes = new byte [stringLength];

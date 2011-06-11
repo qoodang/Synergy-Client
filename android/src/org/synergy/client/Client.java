@@ -23,6 +23,7 @@ import android.graphics.*;
 
 import android.text.*;
 
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 
@@ -53,6 +54,7 @@ public class Client implements EventTarget {
 	private StreamFilterFactoryInterface streamFilterFactory;
 	private ScreenInterface screen;
 	private ClipboardManager clipboard;
+
 	
 	private boolean ready;
 	private boolean active;
@@ -81,7 +83,7 @@ public class Client implements EventTarget {
 		
         assert (socketFactory != null);
         assert (screen != null);
-
+        
         // register suspend / resume event handlers
         // TODO
 	}
