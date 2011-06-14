@@ -24,6 +24,8 @@ import java.io.IOException;
 
 import org.synergy.io.MessageDataInputStream;
 
+import android.app.*;
+
 public class ClipboardDataMessage extends Message {
 	public static final MessageType MESSAGE_TYPE = MessageType.DCLIPBOARD;
 	
@@ -33,7 +35,6 @@ public class ClipboardDataMessage extends Message {
 		
 	public ClipboardDataMessage (MessageHeader header, DataInputStream din) throws IOException {
 		super (header);
-		
 		MessageDataInputStream mdin = new MessageDataInputStream(din);
 		id = mdin.readByte();
 		sequenceNumber = mdin.readInt();

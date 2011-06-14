@@ -144,6 +144,7 @@ public class Synergy extends Activity {
         	  }
         	  
         	  */
+        
         testButton.setOnClickListener (new View.OnClickListener() {
         	//출처 : http://blog.saltfactory.net/2010/11/14/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%EC%97%90%EC%84%9C-%ED%81%B4%EB%A6%BD%EB%B3%B4%EB%93%9C-%EC%82%AC%EC%9A%A9/
 			public void onClick (View arg) {
@@ -183,7 +184,7 @@ public class Synergy extends Activity {
     	EditText clientNameText = (EditText) findViewById (R.id.clientName);
     	EditText ipText = (EditText) findViewById (R.id.ipAddress);
     	EditText outputText = (EditText) findViewById (R.id.output);
-    	
+   
 
         try {
         	SocketFactoryInterface socketFactory = new TCPSocketFactory();

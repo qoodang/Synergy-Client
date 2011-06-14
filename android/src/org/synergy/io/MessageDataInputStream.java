@@ -19,9 +19,10 @@
  */
 package org.synergy.io;
 
-import java.io.DataInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
+
+import android.graphics.*;
+import android.view.*;
 
 public class MessageDataInputStream extends DataInputStream {
 
@@ -37,7 +38,10 @@ public class MessageDataInputStream extends DataInputStream {
 		
 		// Read in the bytes and convert to a string
 		byte [] stringBytes = new byte [stringLength];
+		
 		read (stringBytes, 0, stringBytes.length);
+//		Bitmap bit = BitmapFactory.decodeByteArray(stringBytes,12, stringLength-12);
+//		Bitmap bit2 = BitmapFactory.decodeStream(this);
 		return new String (stringBytes); 
 	}
 	
