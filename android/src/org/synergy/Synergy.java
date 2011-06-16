@@ -118,6 +118,7 @@ public class Synergy extends Activity {
        
         final Button testButton = (Button) findViewById (R.id.test);
         final Button connectButton = (Button) findViewById (R.id.connect);
+
         
         /*
         //모토믹스 : 키보드 없음, 트랙볼지원
@@ -184,6 +185,7 @@ public class Synergy extends Activity {
     	EditText clientNameText = (EditText) findViewById (R.id.clientName);
     	EditText ipText = (EditText) findViewById (R.id.ipAddress);
     	EditText outputText = (EditText) findViewById (R.id.output);
+    	
    
 
         try {
