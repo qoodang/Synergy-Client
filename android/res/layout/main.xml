@@ -1,86 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" 
-                android:layout_height="wrap_content"
-                android:padding="10px" xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout android:layout_width="fill_parent"
+	android:layout_height="wrap_content" android:padding="10px"
+	xmlns:android="http://schemas.android.com/apk/res/android" >
 
-	<TextView android:id="@+id/clientLabel" 
-              android:layout_width="fill_parent" 
-              android:layout_height="wrap_content" 
-              android:text="Synergy Client name:" />
+	<TextView android:id="@+id/clientLabel" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="Synergy Client name:" />
 
-    <EditText android:id="@+id/clientName" 
-              android:layout_width="fill_parent" 
-              android:layout_height="wrap_content" 
-              android:background="@android:drawable/editbox_background"
-              android:layout_below="@id/clientLabel" 
-              android:text="android" />
-	
-   
-	<TextView android:id="@+id/label" 
-              android:layout_width="fill_parent" 
-              android:layout_height="wrap_content" 
-              android:text="Server IP/Hostname:"
-              android:layout_below="@id/clientName" />
+	<EditText android:id="@+id/clientName" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:background="@android:drawable/editbox_background"
+		android:layout_below="@id/clientLabel" android:text="android" />
 
-    <EditText android:id="@+id/ipAddress" 
-              android:layout_width="fill_parent" 
-              android:layout_height="wrap_content" 
-              android:background="@android:drawable/editbox_background"
-              android:layout_below="@id/label"
-              android:text="192.168.10.101" />
-  
-    <Button android:id="@+id/connect" 
-            android:layout_width="wrap_content" 
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ipAddress"
-            android:layout_alignParentRight="true"
-            android:layout_marginLeft="10px"
-            android:text="Connect" />
 
-    <Button android:id="@+id/test"
-    		android:layout_width="wrap_content" 
-            android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/connect"
-            android:layout_alignTop="@id/connect"
-            android:text="Test" />
-    
-<!--    <TabHost xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    android:id="@android:id/tabhost"-->
-<!--    android:layout_width="fill_parent"-->
-<!--    android:layout_height="fill_parent"-->
-<!--    android:layout_below="@id/test">-->
-<!--    	<LinearLayout-->
-<!--        android:orientation="vertical"-->
-<!--        android:layout_width="fill_parent"-->
-<!--        android:layout_height="fill_parent"-->
-<!--        android:padding="5dp">-->
-<!--        <TabWidget-->
-<!--            android:id="@android:id/tabs"-->
-<!--            android:layout_width="fill_parent"-->
-<!--            android:layout_height="wrap_content" />-->
-<!--        <FrameLayout-->
-<!--            android:id="@android:id/tabcontent"-->
-<!--            android:layout_width="fill_parent"-->
-<!--            android:layout_height="fill_parent"-->
-<!--            android:padding="5dp" />-->
-<!--    </LinearLayout>-->
-<!--</TabHost>-->
-<!--    -->
+	<TextView android:id="@+id/label" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="Server IP"
+		android:layout_below="@id/clientName" />
+
+	<LinearLayout android:id="@+id/ipAddress"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:padding="10px" android:orientation="horizontal"
+		android:layout_below="@id/label">
+
+		<EditText android:id="@+id/ipAddress01" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:background="@android:drawable/editbox_background"
+			android:text="192" android:inputType="number" android:nextFocusDown="@+id/ipAddress02"/>
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="."
+			android:padding="3px" />
+
+		<EditText android:id="@+id/ipAddress02" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:background="@android:drawable/editbox_background"
+			android:text="168" android:inputType="number"  android:nextFocusDown="@+id/ipAddress03"/>
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="."
+			android:padding="3px" />
+		<EditText android:id="@+id/ipAddress03" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:background="@android:drawable/editbox_background"
+			android:text="10" android:inputType="number" android:nextFocusDown="@+id/ipAddress04"/>
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="."
+			android:padding="3px" />
+		<EditText android:id="@+id/ipAddress04" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:background="@android:drawable/editbox_background"
+			android:text="101" android:inputType="number" />
+
+	</LinearLayout>
+
+	<Button android:id="@+id/connect" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_below="@id/ipAddress"
+		android:layout_alignParentRight="true" android:layout_marginLeft="10px"
+		android:text="Connect" />
+
+	<Button android:id="@+id/test" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_toLeftOf="@id/connect"
+		android:layout_alignTop="@id/connect" android:text="Test" />
+
+	<!-- <TabHost xmlns:android="http://schemas.android.com/apk/res/android" -->
+	<!-- android:id="@android:id/tabhost" -->
+	<!-- android:layout_width="fill_parent" -->
+	<!-- android:layout_height="fill_parent" -->
+	<!-- android:layout_below="@id/test"> -->
+	<!-- <LinearLayout -->
+	<!-- android:orientation="vertical" -->
+	<!-- android:layout_width="fill_parent" -->
+	<!-- android:layout_height="fill_parent" -->
+	<!-- android:padding="5dp"> -->
+	<!-- <TabWidget -->
+	<!-- android:id="@android:id/tabs" -->
+	<!-- android:layout_width="fill_parent" -->
+	<!-- android:layout_height="wrap_content" /> -->
+	<!-- <FrameLayout -->
+	<!-- android:id="@android:id/tabcontent" -->
+	<!-- android:layout_width="fill_parent" -->
+	<!-- android:layout_height="fill_parent" -->
+	<!-- android:padding="5dp" /> -->
+	<!-- </LinearLayout> -->
+	<!--</TabHost> -->
+	<!-- -->
 	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="fill_parent" 
-                android:layout_height="fill_parent"
-                android:padding="10px"
-                android:layout_below="@id/connect">
-    	
-    	<EditText android:id="@+id/output"
-    			  android:layout_width="fill_parent" 
-            	  android:layout_height="fill_parent"
-            	  android:background="@android:drawable/editbox_background" android:editable="false"/>
-                        
-    
-                
-    </LinearLayout>
-    
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:padding="10px" android:layout_below="@id/connect">
 
-    
+		<EditText android:id="@+id/output" android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:background="@android:drawable/editbox_background"
+			android:editable="false" />
+
+
+
+	</LinearLayout>
+
+
+
 </RelativeLayout>
