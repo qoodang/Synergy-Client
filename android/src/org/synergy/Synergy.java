@@ -30,9 +30,14 @@ import android.content.*;
 import android.os.*;
 import android.text.*;
 import android.view.*;
+import android.view.View.*;
 import android.widget.*;
 
 public class Synergy extends Activity {
+	public EditText ip01;
+	public EditText ip02;
+	public EditText ip03;
+	public EditText ip04;
 	
 	public native String stringFromJNI ();
 	
@@ -118,7 +123,59 @@ public class Synergy extends Activity {
        
         final Button testButton = (Button) findViewById (R.id.test);
         final Button connectButton = (Button) findViewById (R.id.connect);
-
+        
+        //포커스 이동 이벤트 처리
+        ip01 = (EditText)findViewById(R.id.ipAddress01);
+        ip02 = (EditText)findViewById(R.id.ipAddress02);
+        ip03 = (EditText)findViewById(R.id.ipAddress03);
+        ip04 = (EditText)findViewById(R.id.ipAddress04);
+        ip01.setSelectAllOnFocus(true);
+        ip02.setSelectAllOnFocus(true);
+        ip03.setSelectAllOnFocus(true);
+        ip04.setSelectAllOnFocus(true);
+	
+        ip01.addTextChangedListener(new TextWatcher() {		
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				if(ip01.getText().length()==3)
+					ip02.requestFocus();
+				
+			}			
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+				// NOACTION
+			}
+			public void afterTextChanged(Editable s) {
+				// NOACTION
+			}
+		});
+        ip02.addTextChangedListener(new TextWatcher() {		
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				if(ip02.getText().length()==3)
+					ip03.requestFocus();
+				
+			}			
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+				// NOACTION
+			}
+			public void afterTextChanged(Editable s) {
+				// NOACTION
+			}
+		});
+        ip03.addTextChangedListener(new TextWatcher() {		
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				if(ip03.getText().length()==3)
+					ip04.requestFocus();
+				
+			}			
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+				// NOACTION
+			}
+			public void afterTextChanged(Editable s) {
+				// NOACTION
+			}
+		});
         
         /*
         //모토믹스 : 키보드 없음, 트랙볼지원
