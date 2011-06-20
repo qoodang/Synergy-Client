@@ -131,7 +131,7 @@ public class Synergy extends Activity {
         ip04 = (EditText)findViewById(R.id.ipAddress04);
         ip01.setSelectAllOnFocus(true);
         ip02.setSelectAllOnFocus(true);
-        ip03.setSelectAllOnFocus(true);
+        ip03.setSelectAllOnFocus(true); 
         ip04.setSelectAllOnFocus(true);
 	
         ip01.addTextChangedListener(new TextWatcher() {		
